@@ -1,0 +1,20 @@
+{
+	"name" : "Cyber-Lane",
+	"version" : "0.1.0",
+	"author" : "Justin Nel",
+	"private" : true,
+
+	"devDependencies" : {
+		"grunt":			"*",
+		"grunt-regarde":		"*",
+		"grunt-contrib-cssmin":		"*",
+		"grunt-contrib-sass":		"*",
+		"grunt-contrib-uglify":		"*",
+		"grunt-contrib-watch":		"*",
+		"grunt-contrib-livereload":	"*",
+		"grunt-contrib-connect":	"*",
+		"grunt-cssc":			"*",
+		"grunt-htmlhint":		"*",
+		"matchdep":			"*"
+	}
+}

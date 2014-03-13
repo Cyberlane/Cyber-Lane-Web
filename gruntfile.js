@@ -1,0 +1,63 @@
+/*global module:false*/
+var path = require('path');
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+
+var folderMount = function folderMount(connect, point) {
+	return connect.static(path.resolve(point));
+};
+
+module.exports = function(grunt){
+	
+	grunt.initConfig({
+		pkg: grunt.file.readJSON('package.json'),
+		cssc: {
+			build: {
+				options: {
+					consolidateViaDeclarations:	true,
+					consolidateViaSelectors:	true,
+					consolidateMediaQueries:	true
+				},
+				files: {
+					'build/css/master.css': 'build/css/master.css'
+				}
+			}
+		},
+		cssmin: {
+			build: {
+				src: 'build/css/master.css',
+				dest: 'build/css/master.css'
+			}
+		},
+		sass: {
+			build: {
+				files: {
+					'build/css/master.css': 'assets/sass/master.scss'
+				}
+			}
+		},
+		regarde: {
+			txt: {
+				files: ['build/**/*'],
+				tasks: ['livereload']
+			},
+			styles: {
+				files: ['assets/sass/**/*.scss'],
+				tasks: ['compile-css']
+			}
+		},
+		connect: {
+			livereload: {
+				options: {
+					middleware: function(connect, options) {
+						return [lrSnippet, folderMount(connect, '.')]
+					}
+				}
+			}
+		}
+	});
+
+	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	
+	grunt.registerTask('compile-css', ['sass','cssc','cssmin']);
+	grunt.registerTask('default', ['compile-css','livereload-start','connect','regarde']);
+};
