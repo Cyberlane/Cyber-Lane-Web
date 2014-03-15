@@ -47,14 +47,20 @@ module.exports = function(grunt){
 				}
 			}
 		},
-		regarde: {
-			txt: {
+		watch: {
+			build_trigger: {
 				files: ['build/**/*'],
-				tasks: ['livereload']
+				options: {
+					livereload: true
+				}
 			},
 			styles: {
-				files: ['assets/sass/**/*.scss'],
+				files: ['assets/sass/**/*/scss'],
 				tasks: ['compile-css']
+			},
+			txt: {
+				files: ['assets/index.html','assets/svg/*','assets/images/*'],
+				tasks: ['copy:content']
 			}
 		},
 		connect: {
@@ -71,5 +77,5 @@ module.exports = function(grunt){
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 	
 	grunt.registerTask('compile-css', ['sass','cssc','cssmin']);
-	grunt.registerTask('default', ['copy','compile-css','livereload-start','connect','regarde']);
+	grunt.registerTask('default', ['copy','compile-css','connect','watch']);
 };
