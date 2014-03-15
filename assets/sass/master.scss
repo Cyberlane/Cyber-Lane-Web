@@ -175,6 +175,17 @@ footer {
     }
 }
 
+.icon {
+    width:30px;
+    height:30px;
+}
+
+.icon-group {
+    li {
+        display:inline;
+    }
+}
+
 .clearfix {
     &:before, &:after{
         content: " ";  
