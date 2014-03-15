@@ -13,6 +13,7 @@
 		"grunt-contrib-watch":		"*",
 		"grunt-contrib-livereload":	"*",
 		"grunt-contrib-connect":	"*",
+		"grunt-contrib-copy":		"*",
 		"grunt-cssc":			"*",
 		"grunt-htmlhint":		"*",
 		"matchdep":			"*"

@@ -28,6 +28,18 @@ module.exports = function(grunt){
 				dest: 'build/css/master.css'
 			}
 		},
+		copy: {
+			content: {
+				cwd: 'assets/',
+				expand: true,
+				src: [
+					'index.html',
+					'svg/*.svg',
+					'images/*'
+				],
+				dest: 'build/'
+			}
+		},
 		sass: {
 			build: {
 				files: {
@@ -59,5 +71,5 @@ module.exports = function(grunt){
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 	
 	grunt.registerTask('compile-css', ['sass','cssc','cssmin']);
-	grunt.registerTask('default', ['compile-css','livereload-start','connect','regarde']);
+	grunt.registerTask('default', ['copy','compile-css','livereload-start','connect','regarde']);
 };
