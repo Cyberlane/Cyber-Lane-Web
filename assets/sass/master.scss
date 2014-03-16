@@ -21,6 +21,7 @@ $active_tab_colour_hover:   darken($active_tab_colour, 5%);
 
 * {
     margin:0;
+    padding:0;
 }
 
 html,body{
@@ -169,7 +170,8 @@ footer {
 
 .category-block {
     margin-left:25%;
-    ol {
+    ul {
+        list-style-type: none;
         li {
         }
     }
