@@ -1,13 +1,6 @@
-@mixin prefix($property, $value, $prefixes: webkit moz ms o spec) {
-    @each $p in $prefixes {
-        @if $p == spec {
-            #{$property}: $value;
-        }
-        @else {
-            -#{$p}-#{$property}: $value;
-        }
-    }
-}
+@import "mixins";
+@import "fonts";
+
 $input_field:            #999;
 $input_focus:           #559ab9;
 $validation_passed:     #8aba56;
@@ -37,7 +30,7 @@ body {
     background:         #fff url('../images/bg-tile.png') repeat;
     /*box-shadow:         0 1px 3px rgba(0, 0, 0, .1);
     border-radius:      $border_radius;*/
-    font-family:        sans-serif;
+    font-family:        'Overlock', cursive;
 }
 
 input[type="text"] {
@@ -83,7 +76,6 @@ nav {
     height:             40px;
     width:              100%;
     font-size:          11pt;
-    font-family:        'PT Sans', Arial, sans-serif;
     font-weight:        bold;
     position:           relative;
     width:              600px;
@@ -169,7 +161,9 @@ footer {
 }
 
 .category-block {
-    margin-left:25%;
+    width:180px;
+    margin-left:auto;
+    margin-right:auto;
     ul {
         list-style-type: none;
         li {

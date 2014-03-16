@@ -1,0 +1,10 @@
+@mixin prefix($property, $value, $prefixes: webkit moz ms o spec) {
+    @each $p in $prefixes {
+        @if $p == spec {
+            #{$property}: $value;
+        }
+        @else {
+            -#{$p}-#{$property}: $value;
+        }
+    }
+}
