@@ -1,18 +1,18 @@
 @import "mixins";
 @import "fonts";
 
-$input_field:            #999;
-$input_focus:           #559ab9;
-$validation_passed:     #8aba56;
-$validation_failed:     #ba5656;
-$bg_colour:             #f4f4f4;
-$box_colour:            #fff;
-$border_style:          1px solid;
-$border_radius:         4px;
-$active_tab_colour:     #187635;
+$input_field:               #999;
+$input_focus:               #559ab9;
+$validation_passed:         #8aba56;
+$validation_failed:         #ba5656;
+$bg_colour:                 #f4f4f4;
+$box_colour:                #fff;
+$border_style:              1px solid;
+$border_radius:             4px;
+$active_tab_colour:         #187635;
 $active_tab_colour_hover:   darken($active_tab_colour, 5%);
-$nav_border_color:      #000;
-$nav_border_thickness:  3px;
+$nav_border_color:          #000;
+$nav_border_thickness:      3px;
 
 * {
     margin:0;
