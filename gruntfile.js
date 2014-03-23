@@ -35,12 +35,16 @@ module.exports = function(grunt){
 				src: [
 					'index.html',
 					'svg/*.svg',
-					'images/*'
+					'images/*',
+					'fonts/*'
 				],
 				dest: 'build/'
 			}
 		},
 		sass: {
+			options: {
+				compass: true
+			},
 			build: {
 				files: {
 					'build/css/master.css': 'assets/sass/master.scss'

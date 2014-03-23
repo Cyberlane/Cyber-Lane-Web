@@ -11,6 +11,8 @@ $border_style:          1px solid;
 $border_radius:         4px;
 $active_tab_colour:     #187635;
 $active_tab_colour_hover:   darken($active_tab_colour, 5%);
+$nav_border_color:      #000;
+$nav_border_thickness:  3px;
 
 * {
     margin:0;
@@ -22,14 +24,8 @@ html,body{
 }
 
 body {
-    /*width:              720px;
-    padding:            40px;
-    margin:             80px auto;
-    background:         $box_colour;*/
     padding:            0;
     background:         #fff url('../images/bg-tile.png') repeat;
-    /*box-shadow:         0 1px 3px rgba(0, 0, 0, .1);
-    border-radius:      $border_radius;*/
     font-family:        'Overlock', cursive;
 }
 
@@ -54,22 +50,6 @@ input[type="text"],
     padding:            10px;
     display:            inline;
     margin-right:       20px;
-}
-
-input.yep {
-    border-color:       $validation_passed;
-}
-
-input.nope {
-    border-color:       $validation_failed;
-}
-
-p.yep {
-    color:              $validation_passed;            
-}
-
-p.nope {
-    color:              $validation_failed;
 }
 
 nav {
@@ -101,7 +81,7 @@ nav {
             width:              100px;
             text-align:         center;
             text-decoration:    none;
-            line-height:        40px;
+            line-height:        150px;
             text-shadow:        1px 1px 0px #283744;
             &:hover, &:active{
                 background-color: $active_tab_colour_hover;
@@ -116,21 +96,25 @@ nav {
                 color:              #fff;
                 height:             150px;
                 position:relative;
+                border-left:        $nav_border_thickness solid $nav_border_color;
+                border-right:       $nav_border_thickness solid $nav_border_color;
                 &:hover, &:active{
                     &:after {
-                        border-top:30px solid $active_tab_colour_hover;
+                        background-color: $active_tab_colour_hover;
                     }
                 }
                 &:after{
                     content:'';
                     position:absolute;
-                    left:0;
-                    top:150px;
-                    width:0;
-                    height:0;
-                    border-top:30px solid $active_tab_colour;
-                    border-left:50px solid transparent;
-                    border-right:50px solid transparent;
+                    margin:-25px*sqrt(2);
+                    background-color:$active_tab_colour;
+                    border-right:$nav_border_thickness solid $nav_border_color;
+                    border-bottom:$nav_border_thickness solid $nav_border_color;
+                    width: 50px * sqrt(2) - $nav_border_thickness;
+                    height: 50px * sqrt(2) - $nav_border_thickness;
+                    bottom:0;
+                    left:50%;
+                    @include prefix(transform, translate(1px, 0px) rotate(45deg), webkit moz);
                 }
             }
         }
