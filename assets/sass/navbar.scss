@@ -1,0 +1,73 @@
+$active_tab_colour:         #187635;
+$active_tab_colour_hover:   darken($active_tab_colour, 5%);
+$nav_border_color:          #000;
+$nav_border_thickness:      3px;
+
+nav {
+    height:             40px;
+    width:              100%;
+    font-size:          11pt;
+    font-weight:        bold;
+    position:           relative;
+    width:              600px;
+    margin:             0 auto;
+    img.logo {
+        width:150px;
+        height:150px;
+        float:left;
+        margin-right:50px;
+    }
+    ul {
+        padding:        0;
+        height:         40px;
+    }
+    li {
+        display:        inline;
+        float:          left;
+        a {
+            border-right:       1px solid #576979;
+            @include            prefix(box-sizing, border-box, webkit moz);
+            color:              #fff;
+            display:            inline-block;
+            width:              100px;
+            text-align:         center;
+            text-decoration:    none;
+            line-height:        150px;
+            text-shadow:        1px 1px 0px #283744;
+            &:hover, &:active{
+                background-color: $active_tab_colour_hover;
+            }
+        }
+        &:last-child a{
+            border-right: 0;
+        }
+        &.active {
+            background-color:   $active_tab_colour;
+            a {
+                color:              #fff;
+                height:             150px;
+                position:relative;
+                border-left:        $nav_border_thickness solid $nav_border_color;
+                border-right:       $nav_border_thickness solid $nav_border_color;
+                &:hover, &:active{
+                    &:after {
+                        background-color: $active_tab_colour_hover;
+                    }
+                }
+                &:after{
+                    content:'';
+                    position:absolute;
+                    margin:-25px*sqrt(2);
+                    background-color:$active_tab_colour;
+                    border-right:$nav_border_thickness solid $nav_border_color;
+                    border-bottom:$nav_border_thickness solid $nav_border_color;
+                    width: 50px * sqrt(2) - $nav_border_thickness;
+                    height: 50px * sqrt(2) - $nav_border_thickness;
+                    bottom:0;
+                    left:50%;
+                    @include prefix(transform, translate(1px, 0px) rotate(45deg), webkit moz);
+                }
+            }
+        }
+    }
+}
