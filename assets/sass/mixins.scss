@@ -8,3 +8,10 @@
         }
     }
 }
+
+@mixin calc($property, $value) {
+	@each $pre in -webkit-, -moz- {
+		#{$property}: $pre + calc(#{$value});
+	}
+	#{$property}: calc(#{$value});
+}
