@@ -63,7 +63,7 @@ module.exports = function(grunt){
 				tasks: ['compile-css']
 			},
 			txt: {
-				files: ['assets/index.html','assets/svg/*','assets/images/*'],
+				files: ['assets/index.html','assets/svg/*.*','assets/images/*.*'],
 				tasks: ['copy:content']
 			}
 		},
