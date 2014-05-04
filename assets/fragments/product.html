@@ -1,0 +1,40 @@
+<% _.map(products, function(product){ %>
+<article itemscope itemstyle="http://schema.org/Product">
+	<a href="#" title="#" itemprop="url">
+		<img src="#image" alt="#title" width="#" height="#" itemprop="image" />
+	</a>
+	<h1 itemprop="name"><%= product.Title %></h1>
+	<div class="description" itemprop="description">
+		<p><%= product.Description %></p>
+	</div>
+	<div class="rating" itemscope itemtype="http://schema.org/AggregateRating">
+		<p>Rating: <span itemprop="ratingValue"><%= product.Rating %></span> out of <span itemprop="bestRating">10</span> by <span itemprop="reviewCount"><%= product.Reviews.length %></span> customers</p>
+	</div>
+	<div class="offer" itemscope itemtype="http://schema.org/Offer">
+		<span class="price" itemprop="price">&pound;<%= product.Price.Value.toFixed(2) %></span>
+		<span class="availability" itemprop="availability">
+			<% if (product.StockCount > 0) { %>
+			In stock!
+			<% } else { %>
+			Out of stock
+			<% } %>
+		</span>
+	</div>
+	<% if (product.StockCount > 0) { %>
+	<a href="#" title="Add to Cart"><span>Add to Cart</span></a>
+	<% } %>
+	<ol class="review_list">
+		<% _.map(product.Reviews, function(review){ %>
+		<li>
+			<article itemscope itemtype="http://schema.org/Review">
+				<h1 itemprop="name"><%= review.Title %></h1>
+				<p>Posted by: <b itemprop="author"><%= review.Author %></b> at <time datetime="<%= review.Date %>" pubdate itemprop="datePublished">Apr. 1</time></p>
+				<div class="review_content" itemprop="description">
+					<p><%= review.Description %></p>
+				</div>
+			</article>
+		</li>
+		<% }) %>
+	</ol>
+</article>
+<% }) %>

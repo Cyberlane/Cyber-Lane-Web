@@ -1,0 +1,18 @@
+<% _.map(blog_posts, function(entry){ %>
+	<article>
+		<header>
+			<h1><a href="#"><%= entry.Title %></a></h1>
+			<time itemprop="dateCreated" datetime="<%= entry.Date %>">
+				<span class="entry-day">3</span>
+				<span class="entry-month">Apr</span>
+				<span class="entry-year">2014</span>
+			</time>
+			<ul class="tags">
+				<% _.map(entry.Tags, function(tag){ %>
+				<li><a href="#"><%= tag %></a></li>
+				<% }) %>
+			</ul>
+		</header>
+		<p><%= entry.Summary %> …(<a href="#">Read More</a>)</p>
+	</article>
+<% }) %>

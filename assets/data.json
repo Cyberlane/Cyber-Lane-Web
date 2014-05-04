@@ -1,0 +1,42 @@
+{
+	"blog_posts": [
+		{
+			"Title": "Progress Reports",
+			"Date": "2014-04-03",
+			"Tags": ["General Chat", "Progress Reports"],
+			"Summary": "I haven’t been posted often enough this year! Let’s get out of that bad habbit by starting with some of the things I have been working on. Currently I am thinking of making some further tweaks to my web site, as I am still not really happy with it yet ( I won’t go into full detail though ). Anyway, as an excuse to improve my knowledge around CSS3, I thought I would try my hand"
+		},
+		{
+			"Title": "OpenSCAD Stuff",
+			"Date": "2014-01-09",
+			"Tags": ["OpenSCAD", "Home-Improvement", "Qi-Wireless-Charging"],
+			"Summary": "I haven’t been posted often enough this year! Let’s get out of that bad habbit by starting with some of the things I have been working on. Currently I am thinking of making some further tweaks to my web site, as I am still not really happy with it yet ( I won’t go into full detail though ). Anyway, as an excuse to improve my knowledge around CSS3, I thought I would try my hand"
+		}
+	],
+	"products": [
+		{
+			"Title": "Flower Badge",
+			"Description": "Flower badge info",
+			"Rating": 9,
+			"Price": {
+				"Currency": "GBP",
+				"Value": 10.00
+			},
+			"Reviews": [
+				{
+					"Title": "Loved it!!!",
+					"Author": "Alex",
+					"Date": "2014-04-04",
+					"Description": "A nice long review"
+				},
+				{
+					"Title": "Awesome!",
+					"Author": "Bob",
+					"Date": "2014-04-05",
+					"Description": "Panda bears want candy canes"
+				}
+			],
+			"StockCount": 10
+		}
+	]
+}

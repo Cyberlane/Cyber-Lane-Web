@@ -1,6 +1,7 @@
-$active_tab_colour:         #187635;
+$navbar_width:              250px;
+$active_tab_colour:         #1A1A1A;
 $active_tab_colour_hover:   darken($active_tab_colour, 5%);
-$inactive_tab_colour:       lighten($active_tab_colour, 10%);
+$inactive_tab_colour:       #2E2E2E;
 $nav_border_color:          #000;
 $nav_border_thickness:      3px;
 $nav_height:                50px;
