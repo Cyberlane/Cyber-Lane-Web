@@ -8,7 +8,11 @@
 		<p><%= product.Description %></p>
 	</div>
 	<div class="rating" itemscope itemtype="http://schema.org/AggregateRating">
-		<p>Rating: <span itemprop="ratingValue"><%= product.Rating %></span> out of <span itemprop="bestRating">10</span> by <span itemprop="reviewCount"><%= product.Reviews.length %></span> customers</p>
+		<input type="radio" name="rating" value="1"><i></i>
+		<input type="radio" name="rating" value="2"><i></i>
+		<input type="radio" name="rating" value="3"><i></i>
+		<input type="radio" name="rating" value="4"><i></i>
+		<input type="radio" name="rating" value="5"><i></i>
 	</div>
 	<div class="offer" itemscope itemtype="http://schema.org/Offer">
 		<span class="price" itemprop="price">&pound;<%= product.Price.Value.toFixed(2) %></span>
@@ -20,10 +24,10 @@
 			<% } %>
 		</span>
 	</div>
-	<% if (product.StockCount > 0) { %>
+ 	<% if (product.StockCount > 0) { %>
 	<a href="#" title="Add to Cart"><span>Add to Cart</span></a>
 	<% } %>
-	<ol class="review_list">
+<!--	<ol class="review_list">
 		<% _.map(product.Reviews, function(review){ %>
 		<li>
 			<article itemscope itemtype="http://schema.org/Review">
@@ -35,6 +39,6 @@
 			</article>
 		</li>
 		<% }) %>
-	</ol>
+	</ol> -->
 </article>
 <% }) %>

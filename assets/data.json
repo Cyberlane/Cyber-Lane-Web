@@ -63,6 +63,31 @@
 				}
 			],
 			"StockCount": 10
+		},
+		{
+			"Title": "Tree Kit Trinket",
+			"Description": "Tree Kit info",
+			"Rating": 8.5,
+			"Image": "tree-kit-trinket.png",
+			"Price": {
+				"Currency": "GBP",
+				"Value": 15.00
+			},
+			"Reviews": [
+				{
+					"Title": "Loved it!!!",
+					"Author": "Alex",
+					"Date": "2014-04-04",
+					"Description": "A nice long review"
+				},
+				{
+					"Title": "Awesome!",
+					"Author": "Bob",
+					"Date": "2014-04-05",
+					"Description": "Panda bears want candy canes"
+				}
+			],
+			"StockCount": 10
 		}
 	]
 }
