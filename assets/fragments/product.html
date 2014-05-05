@@ -1,7 +1,7 @@
 <% _.map(products, function(product){ %>
 <article itemscope itemstyle="http://schema.org/Product">
-	<a href="#" title="#" itemprop="url">
-		<img src="#image" alt="#title" width="#" height="#" itemprop="image" />
+	<a href="#" title="<%= product.Title %>" itemprop="url">
+		<img src="images/products/<%= product.Image %>" alt="<%= product.Title %>" width="#" height="#" itemprop="image" />
 	</a>
 	<h1 itemprop="name"><%= product.Title %></h1>
 	<div class="description" itemprop="description">

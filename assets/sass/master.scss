@@ -34,6 +34,7 @@ a {
     @include calc(width, '100% - 250px - 20px');
     margin:10px;
     @include transparent(#FFF, 0.5);
+    overflow: auto;
 }
 article {
     max-width: 540px;
@@ -49,11 +50,41 @@ article {
     &:last-child {
         border-bottom: none;
     }
+    &[itemstyle="http://schema.org/Product"] {
+        a {
+            float:left;
+        }
+    }
+    &[itemtype="http://schema.org/Review"] {
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: 31px;
+        color: #08C;
+    }
+    .review_list {
+        clear:both;
+        list-style: none;
+        h1 {
+            font-size: 16px;
+        }
+    }
+    a {
+        margin: 0.45em 0.95em;
+        span {
+            background-color: #08C;
+            color: #FFF;
+            border-radius: 100px;
+            padding: 0.45em 0.95em;
+            &:hover {
+                background-color: darken(#08C, 10%);
+            }
+        }
+    }
     header {
         clear: both;
         overflow:auto;
         h1 {
-            font-size: 31px;
             float: left;
             a {
                 color: #08C;

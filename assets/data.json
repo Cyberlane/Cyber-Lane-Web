@@ -18,9 +18,35 @@
 			"Title": "Flower Badge",
 			"Description": "Flower badge info",
 			"Rating": 9,
+			"Image": "soldering-is-easy.png",
 			"Price": {
 				"Currency": "GBP",
 				"Value": 10.00
+			},
+			"Reviews": [
+				{
+					"Title": "Loved it!!!",
+					"Author": "Alex",
+					"Date": "2014-04-04",
+					"Description": "A nice long review"
+				},
+				{
+					"Title": "Awesome!",
+					"Author": "Bob",
+					"Date": "2014-04-05",
+					"Description": "Panda bears want candy canes"
+				}
+			],
+			"StockCount": 10
+		},
+		{
+			"Title": "Snow Meep",
+			"Description": "Snow meep badge info",
+			"Rating": 8.5,
+			"Image": "snow-meep.png",
+			"Price": {
+				"Currency": "GBP",
+				"Value": 12.00
 			},
 			"Reviews": [
 				{
