@@ -15,6 +15,7 @@
 	],
 	"products": [
 		{
+			"Id": 1,
 			"Title": "Flower Badge",
 			"Description": "Flower badge info",
 			"Rating": 9,
@@ -40,6 +41,7 @@
 			"StockCount": 10
 		},
 		{
+			"Id": 2,
 			"Title": "Snow Meep",
 			"Description": "Snow meep badge info",
 			"Rating": 8.5,
@@ -65,6 +67,7 @@
 			"StockCount": 10
 		},
 		{
+			"Id": 3,
 			"Title": "Tree Kit Trinket",
 			"Description": "Tree Kit info",
 			"Rating": 8.5,

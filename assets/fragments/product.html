@@ -8,11 +8,12 @@
 		<p><%= product.Description %></p>
 	</div>
 	<div class="rating" itemscope itemtype="http://schema.org/AggregateRating">
-		<input type="radio" name="rating" value="1"><i></i>
-		<input type="radio" name="rating" value="2"><i></i>
-		<input type="radio" name="rating" value="3"><i></i>
-		<input type="radio" name="rating" value="4"><i></i>
-		<input type="radio" name="rating" value="5"><i></i>
+		<% var radioName = 'rating_' + product.Id; %>
+		<input type="radio" name="<%= radioName %>" value="1"><i></i>
+		<input type="radio" name="<%= radioName %>" value="2"><i></i>
+		<input type="radio" name="<%= radioName %>" value="3"><i></i>
+		<input type="radio" name="<%= radioName %>" value="4" checked="checked"><i></i>
+		<input type="radio" name="<%= radioName %>" value="5"><i></i>
 	</div>
 	<div class="offer" itemscope itemtype="http://schema.org/Offer">
 		<span class="price" itemprop="price">&pound;<%= product.Price.Value.toFixed(2) %></span>
