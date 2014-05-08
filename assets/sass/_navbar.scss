@@ -1,0 +1,25 @@
+nav {
+    width: $navbar_width;
+    @include calc(height, '100% - (' + $footer_height + ' + ' + $footer_padding_top + ')');
+    background-color: $navbar_tab_inactive;
+    float:left;
+    ul {
+        li {
+            line-height:$navbar_line_height;
+            text-align: right;
+            a {
+                color: $navbar_color;
+                text-decoration: none;
+                display:inline-block;
+                padding-right:$navbar_padding_right;
+                @include calc(width, '100% - ' + $navbar_padding_right);
+                &:hover {
+                    background-color: $navbar_tab_active_hover;
+                }
+                &.active {
+                    background-color: $navbar_tab_active;
+                }
+            }
+        }
+    }
+}

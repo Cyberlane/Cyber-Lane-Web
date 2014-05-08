@@ -1,0 +1,20 @@
+.shop_bar {
+    height: $shopbar_height;
+    line-height: $shopbar_height;
+    font-size: 1.1em;
+    background-color: $shopbar_background;
+    text-align: right;
+    margin-bottom: $shopbar_margin_bottom;
+    li {
+        display: inline-block;
+        cursor: pointer;
+        padding-left: $shopbar_padding_horizontal;
+        padding-right: $shopbar_padding_horizontal;
+        &:hover {
+            background-color: $shopbar_background_hover;
+        }
+        a {
+            color: $shopbar_color;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+$default_font_size:				18px;
+$default_link_color:			#08C;
+$default_link_decoration:		none;
+
+$navbar_width:					250px;
+$navbar_tab_active:				#1A1A1A;
+$navbar_tab_active_hover:		darken($navbar_tab_active, 5%);
+$navbar_tab_inactive:			#2E2E2E;
+$navbar_padding_right:			10px;
+$navbar_color:					#FFF;
+$navbar_line_height:			40px;
+
+$shopbar_height:				45px;
+$shopbar_background:			#333;
+$shopbar_background_hover:		lighten($shopbar_background, 10%);
+$shopbar_color:					#FFF;
+$shopbar_padding_horizontal:	10px;
+$shopbar_margin_bottom:			10px;
+
+$footer_height:					135px;
+$footer_padding_top:			20px;
+$footer_color:					#FFF;
+$footer_background:				#051719;
+
+$content_margin:				10px;
