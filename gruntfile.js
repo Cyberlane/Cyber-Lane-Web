@@ -76,11 +76,11 @@ module.exports = function(grunt){
 				tasks: ['compile-css']
 			},
 			html: {
-				files: ['assets/*.html','assets/fragments/**/*.html', 'assets/data.json'],
+				files: ['assets/**/*.html', 'assets/data.json'],
 				tasks: ['build_html']
 			},
 			txt: {
-				files: ['assets/svg/*.*','assets/images/*.*'],
+				files: ['assets/svg/*.*','assets/images/*.*','assets/**/*.html'],
 				tasks: ['copy:content']
 			}
 		},

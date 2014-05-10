@@ -1,5 +1,6 @@
 $default_font_size:				18px;
 $default_link_color:			#08C;
+$default_link_color_hover:		darken($default_link_color, 10%);
 $default_link_decoration:		none;
 
 $navbar_width:					250px;
@@ -23,3 +24,10 @@ $footer_color:					#FFF;
 $footer_background:				#051719;
 
 $content_margin:				10px;
+$content_padding:				5px;
+
+$article_green:					#42AF47;
+$article_border_top:			lighten($article_green, 10%);
+$article_border_bottom:			darken($article_green, 10%);
+$article_padding_top:			10px;
+$article_padding_bottom:		25px;
