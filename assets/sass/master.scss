@@ -5,6 +5,7 @@
 @import "footer";
 @import "shop_bar";
 @import "stars";
+@import "contact";
 @import "fontawesome/font-awesome";
 
 * {
@@ -50,24 +51,18 @@ article {
         border-bottom: none;
     }
     &[itemstyle="http://schema.org/Product"] {
-        //width: 270px;
-        width: calc(33% - 5px);
+        @include calc(width, '33% - 5px');
         float: left;
         background-color: #FFF;
         text-align: center;
         border: 1px solid darken(#42AF47, 10%);
-        &:nth-of-type(odd) {
-            // @include calc(margin-left, '50% - 280px');
-        }
-        //&:nth-of-type(even) {
-            margin-left: 5px;
-        //}
-        &:nth-of-type(3) {
-            // margin-top: 10px;
-        }
+        margin-left: 5px;
     }
     &[itemtype="http://schema.org/Review"] {
         padding-bottom: 15px;
+    }
+    &[itemstyle="http://schema.org/ContactPage"] {
+
     }
     h1 {
         font-size: 1.72em;
@@ -168,7 +163,7 @@ article {
 @media screen and (max-width: 1120px) {
     article{
         &[itemstyle="http://schema.org/Product"]{
-            width: calc(50% - 10px);
+            @include calc(width, '50% - 10px');
         }
     }
 }
@@ -176,7 +171,7 @@ article {
 @media screen and (max-width: 850px) {
     article{
         &[itemstyle="http://schema.org/Product"]{
-            width: calc(100% - 10px);
+            @include calc(width, '100% - 10px');
         }
     }
 }

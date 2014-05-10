@@ -1,0 +1,40 @@
+.contact-form {
+	input,
+	select,
+	textarea,
+	label {
+		width:450px;
+		margin-bottom: 2px;
+	}
+	input,
+	select,
+	textarea {
+		border: 1px solid #CEE1E8;
+		padding: 4px;
+	}
+	input:focus,
+	select:focus,
+	textarea:focus {
+		border:1px solid #AFCDD8;
+		background-color:#EBF2F4;
+	}
+	textarea {
+		height: 150px;
+		resize:none;
+	}
+	label{
+		display:block;
+	}
+	input[type="submit"] {
+		width: 100px;
+		background-color:#333;
+		color:#FFF;
+		border:none;
+		display:block;
+		float:right;
+		margin-bottom:0;
+		margin-right:6px;
+		background-color:#8FB5C1;
+		border-radius:8px;
+	}
+}

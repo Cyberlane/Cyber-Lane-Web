@@ -1,1 +1,25 @@
-Contact form goes here...
+<article itemscope itemstyle="http://schema.org/ContactPage">
+	<h1>Get in touch!</h1>
+
+	Some extra text goes here...
+
+	<hr />
+
+	<h1>Send an email</h1>
+
+	<form method="post" action="contact.html" class="contact-form">
+		<label for="name">
+			Name:
+			<input type="text" id="name" name="name" placeholder="John Doe" required="required" />
+		</label>
+		<label for="email">
+			Email:
+			<input type="email" id="email" name="email" placeholder="johndoe@example.com" required="required" />
+		</label>
+		<label for="message">
+			Message:
+			<textarea id="message" name="message" placeholder="Your message must be greater than 20 characters" required="required" data-minlength="20"></textarea>
+		</label>
+		<input type="submit" value="Send" />
+	</form>
+</article>
