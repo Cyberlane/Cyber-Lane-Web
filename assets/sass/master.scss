@@ -15,8 +15,9 @@ html,body{
     height:100%;
 }
 body {
-    background:         url('../svg/trianglify-background.svg') no-repeat center center fixed;
-    @include            prefix(background-size, cover, webkit moz o);
+    //background:         url('../svg/trianglify-background.svg') no-repeat center center fixed;
+    background:         url('../images/bg-tile.png') repeat;
+    //@include            prefix(background-size, cover, webkit moz o);
     font-size:          $default_font_size;
     font-family:        'Droid Serif', serif;
     //font-family:        'Overlock', cursive;
@@ -28,7 +29,8 @@ a {
 .content {
     @include calc(height, '100% - (' + $content_margin + ' + ' + $content_margin + ')');
     @include calc(width, '100% - (' + $navbar_width + ' + ' + $content_margin + ' + ' + $content_margin + ')');
-    @include transparent(#FFF, 0.5);
+    background-color: #F5F5F5;
+    //@include transparent(#FFF, 0.5);
     float:right;
     margin:$content_margin;
     overflow: auto;
