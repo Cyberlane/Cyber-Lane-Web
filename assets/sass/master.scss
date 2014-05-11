@@ -3,9 +3,11 @@
 @import "fonts";
 @import "navbar";
 @import "footer";
+@import "button";
 @import "shop_bar";
 @import "stars";
 @import "contact";
+@import "rounded_list";
 @import "fontawesome/font-awesome";
 
 * {
@@ -25,6 +27,24 @@ a {
     text-decoration: $default_link_decoration;
     &:hover {
         color: $default_link_color_hover;
+    }
+}
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    &:after {
+        content: '§';
+        display:inline-block;
+        position: relative;
+        top: -0.7em;
+        font-size:1.5em;
+        padding: 0 0.25em;
+        background: #F5F5F5;
     }
 }
 .content {
@@ -62,7 +82,15 @@ article {
         padding-bottom: 15px;
     }
     &[itemstyle="http://schema.org/ContactPage"] {
-
+        ol {
+            li {
+                a{
+                    &:after {
+                        content: '?';
+                    }
+                }
+            }
+        }
     }
     h1 {
         font-size: 1.72em;
@@ -75,7 +103,7 @@ article {
         span {
             background-color: #08C;
             color: #FFF;
-            border-radius: 100px;
+            @include prefix(border-radius, 100px, moz webkit spec);
             padding: 0.45em 0.95em;
             &:hover {
                 background-color: darken(#08C, 10%);
@@ -107,7 +135,7 @@ article {
         }
         time {
             background-color: #42AF47;
-            border-radius: 100px;
+            @include prefix(border-radius, 100px, moz webkit spec);
             font-size: 0.67em;
             line-height: 1.1;
             text-transform: uppercase;

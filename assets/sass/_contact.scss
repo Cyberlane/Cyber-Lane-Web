@@ -1,16 +1,19 @@
 .contact-form {
+	width: $contact_form_width + ($contact_form_padding * 2) + ($contact_form_border_size * 2);
+	margin-left:auto;
+	margin-right:auto;
 	input,
 	select,
 	textarea,
 	label {
-		width:450px;
+		width:$contact_form_width;
 		margin-bottom: 2px;
 	}
 	input,
 	select,
 	textarea {
-		border: 1px solid #CEE1E8;
-		padding: 4px;
+		border: $contact_form_border_size solid $contact_form_border_color;
+		padding: $contact_form_padding;
 	}
 	input:focus,
 	select:focus,
@@ -27,14 +30,17 @@
 	}
 	input[type="submit"] {
 		width: 100px;
-		background-color:#333;
 		color:#FFF;
 		border:none;
 		display:block;
 		float:right;
 		margin-bottom:0;
+		padding:6px;
 		margin-right:6px;
-		background-color:#8FB5C1;
+		background-color:$contact_form_submit_bg_color;
 		border-radius:8px;
+		&:hover {
+			background-color: darken($contact_form_submit_bg_color, 10%);
+		}
 	}
 }

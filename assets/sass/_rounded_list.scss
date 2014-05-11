@@ -1,0 +1,44 @@
+.rounded-list {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    padding: 0;
+    margin-left:2em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    i {
+        font-style: normal;
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em 2em;
+        *padding: .4em;
+        margin: .5em 0;
+        background: #DDD;
+        color: #444;
+        text-decoration: none;
+        @include prefix(border-radius, .3em, moz webkit spec);
+        @include prefix(transition, all .3s ease-out, webkit moz ms o spec);
+        &:hover {
+            background: #EEE;
+            &:before {
+                @include prefix(transform, rotate(360deg));
+            }
+        }
+        &:before {
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -1.3em;
+            top: 50%;
+            margin-top:-1.3em;
+            background: #87CEEB;
+            height: 2em;
+            width: 2em;
+            line-height:2em;
+            border: .3em solid #FFF;
+            text-align: center;
+            font-weight: bold;
+            @include prefix(border-radius, 2em, moz webkit spec);
+            @include prefix(transition, all .3s ease-out, webkit moz ms o spec);
+        }
+    }
+}
