@@ -33,7 +33,7 @@ module.exports = function(grunt){
 				cwd: 'assets/',
 				expand: true,
 				src: [
-					'index.html',
+					// 'index.html',
 					'svg/*.svg',
 					'images/**',
 					'fonts/*'

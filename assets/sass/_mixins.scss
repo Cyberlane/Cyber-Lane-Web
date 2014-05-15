@@ -24,3 +24,11 @@
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
     zoom: 1;
 }
+
+@mixin box-shadow($H1) {
+    @include prefix(box-shadow, $H1, webkit moz spec);
+}
+
+@mixin border-radius($H1) {
+    @include prefix(border-radius, $H1, webkit moz spec);
+}

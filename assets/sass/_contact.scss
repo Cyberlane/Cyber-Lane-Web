@@ -30,17 +30,6 @@
 	}
 	input[type="submit"] {
 		width: 100px;
-		color:#FFF;
-		border:none;
-		display:block;
 		float:right;
-		margin-bottom:0;
-		padding:6px;
-		margin-right:6px;
-		background-color:$contact_form_submit_bg_color;
-		border-radius:8px;
-		&:hover {
-			background-color: darken($contact_form_submit_bg_color, 10%);
-		}
 	}
 }

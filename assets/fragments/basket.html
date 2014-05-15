@@ -1,11 +1,37 @@
-basket goes here...
-
-<div>
-	<input type="button" class="button" value="123" />
-</div>
-<br />
-<ul class="button-group">
-	<li><input type="button" class="button" value="123" /></li>
-	<li><input type="button" class="button" value="456" /></li>
-	<li><input type="button" class="button" value="789" /></li>
+<ul class="basket-list">
+<% _.map(products, function(product){ %>
+<li>
+	<div class="basket-item-info">
+		<div class="basket-item-image">
+			<img src="images/products/<%= product.Image %>" alt="<%= product.Title %>" itemprop="image" />
+		</div>
+		<div class="basket-item-summary">
+			<h2><%= product.Title %></h2>
+			<p><%= product.Description %></p>
+		</div>
+		<span class="basket-item-total">
+			&pound;<%= product.Price.Value.toFixed(2) %>
+		</span>
+	</div>
+	<div class="basket-item-quantity">
+		<p>
+			<a href="#" class="basket-item-quantity-increase button" title="Add another copy">+</a>
+			<a href="#" class="basket-item-quantity-decrease button" title="Remove a copy">-</a>
+			<span data-quantity="1">
+				<b>1</b> copy at &pound;<%= product.Price.Value.toFixed(2) %>
+			</span>
+		</p>
+		<a href="#" class="basket-item-remove button" title="Remove this item">×</a>
+	</div>
+</li>
+<% }) %>
 </ul>
+
+<div class="basket-summary">
+	<ul class="basket-breakdown">
+	</ul>
+	<ul class="basket-checkout">
+	</ul>
+</div>
+
+<!-- http://codepen.io/didharshthings/full/tCoqK -->
