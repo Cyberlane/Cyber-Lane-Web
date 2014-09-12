@@ -13,9 +13,11 @@ module.exports = function(grunt){
 		cssc: {
 			build: {
 				options: {
-					consolidateViaDeclarations:	true,
-					consolidateViaSelectors:	true,
-					consolidateMediaQueries:	true
+                    sortSelectorskey:           true,
+                    lineBreaks:                 true,
+					consolidateViaDeclarations:	false,
+					consolidateViaSelectors:	false,
+					consolidateMediaQueries:	false
 				},
 				files: {
 					'build/css/master.css': 'build/css/master.css'
@@ -32,14 +34,27 @@ module.exports = function(grunt){
 			content: {
 				cwd: 'assets/',
 				expand: true,
-				src: [
-					// 'index.html',
-					'svg/*.svg',
-					'images/**',
-					'fonts/*'
-				],
+				src: 'index.html',
 				dest: 'build/'
-			}
+			},
+            svg: {
+                cwd: 'assets/svg/',
+                expand: true,
+                src: '*.svg',
+                dest: 'build/svg/'
+            },
+            images: {
+                cwd: 'assets/images/',
+                expand: true,
+                src: '**',
+                dest: 'build/images/'
+            },
+            fonts: {
+                cwd: 'assets/fonts/',
+                expand: true,
+                src: '*',
+                dest: 'build/fonts/'
+            }
 		},
 		sass: {
 			options: {
@@ -79,8 +94,20 @@ module.exports = function(grunt){
 				files: ['assets/**/*.html', 'assets/data.json'],
 				tasks: ['build_html']
 			},
+            svg: {
+                files: ['assets/svg/*.*'],
+                tasks: ['copy:svg']
+            },
+            images: {
+                files: ['assets/images/*.*'],
+                tasks: ['copy:images']
+            },
+            fonts: {
+                files: ['assets/fonts/*.*'],
+                tasks: ['copy:fonts']
+            },
 			txt: {
-				files: ['assets/svg/*.*','assets/images/*.*','assets/**/*.html'],
+				files: ['assets/**/*.html'],
 				tasks: ['copy:content']
 			}
 		},

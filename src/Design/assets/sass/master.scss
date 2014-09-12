@@ -48,17 +48,21 @@ hr {
         background: #F5F5F5;
     }
 }
+.logo{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
 .content {
     @include calc(height, '100% - (' + $content_margin * 2 + ' + ' + $content_padding * 2 + ')');
     @include calc(width, '100% - (' + $navbar_width + ' + ' + $content_margin * 2 + ' + ' + $content_padding * 2 + ')');
     background-color: #F5F5F5;
-    float:right;
     margin:$content_margin;
     overflow: auto;
     padding: $content_padding;
+    float:right;
 }
 article {
-    // max-width: 540px;
     margin-left: auto;
     margin-right: auto;
     padding-top: $article_padding_top;
@@ -73,11 +77,10 @@ article {
     }
     &[itemstyle="http://schema.org/Product"] {
         @include calc(width, '33% - 5px');
-        float: left;
         background-color: #FFF;
         text-align: center;
         border: 1px solid darken(#42AF47, 10%);
-        margin-left: 5px;
+        display:inline-block;
     }
     &[itemtype="http://schema.org/Review"] {
         padding-bottom: 15px;
@@ -111,6 +114,9 @@ article {
             }
         }
     }
+    p {
+        margin-top: 25px;
+    }
     .offer {
         margin-bottom: 10px;
     }
@@ -126,6 +132,7 @@ article {
         overflow:auto;
         h1 {
             float: left;
+            display:inline-block;
             a {
                 color: #08C;
                 text-decoration: none;
@@ -156,8 +163,12 @@ article {
         .tags {
             float: left;
             clear:left;
-            display: inline-block;
             list-style: none;
+            &:before {
+                font-family: FontAwesome;
+                content: '\f02c';
+                font-size: 1.5em;
+            }
             li {
                 font-size: 0.78em;
                 display: inline-block;
@@ -170,7 +181,7 @@ article {
                     content: ',';
                 }
                 &:last-child:after {
-                    content: '';
+                    content: none;
                 }
             }
         }
@@ -203,9 +214,15 @@ article {
             @include calc(width, '100% - 10px');
         }
     }
+    .logo{
+        width: $navbar_width_medium;
+    }
 }
 
 @media screen and (max-width: 600px) {
+    nav,footer{
+        display:none;
+    }
 }
 
 @media only screen and (max-width : 480px) {

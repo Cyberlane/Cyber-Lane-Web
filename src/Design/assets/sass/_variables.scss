@@ -4,6 +4,8 @@ $default_link_color_hover:		darken($default_link_color, 10%);
 $default_link_decoration:		none;
 
 $navbar_width:					250px;
+$navbar_width_medium:			200px;
+$navbar_width_small:			150px;
 $navbar_tab_active:				#1A1A1A;
 $navbar_tab_active_hover:		darken($navbar_tab_active, 5%);
 $navbar_tab_inactive:			#2E2E2E;
@@ -30,7 +32,7 @@ $article_green:					#42AF47;
 $article_border_top:			lighten($article_green, 10%);
 $article_border_bottom:			darken($article_green, 10%);
 $article_padding_top:			10px;
-$article_padding_bottom:		25px;
+$article_padding_bottom:		55px;
 
 $contact_form_width:			450px;
 $contact_form_padding:			4px;
