@@ -1,7 +1,60 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1')
+		link(rel='stylesheet', href='/stylesheets/style.css', media='screen')
+	body
+		nav
+			img.logo(src='/svg/full-logo.svg')
+			ul
+				li
+					a.active(href='/')
+						| Home
+						i.fa.fa-home
+				li
+					a(href='/blog')
+						| Blog
+						i.fa.fa-rss
+				li
+					a(href='/products')
+						| Products
+						i.fa.fa-flask
+				li
+					a(href='/contact')
+						| Contact
+						i.fa.fa-envelope
+				li
+					a(href='/basket')
+						| Basket
+						i.fa.fa-shopping-cart
+		section(class='content')
+			block content
+		footer
+			section
+				| Social
+				ul.icon-group
+					li
+						a(href='http://twitter.com/Cyberlane')
+							img.icon(src='/svg/twitter.svg')
+					li
+						a(href='https://plus.google.com/+JustinNel')
+							img.icon(src='/svg/gplus.svg')
+					li
+						a(href='#')
+							img.icon(src='/svg/youtube.svg')
+					li
+						a(href='https://github.com/Cyberlane')
+							img.icon(src='/svg/github.svg')
+					li
+						a(href='http://careers.stackoverflow.com/cyberlane')
+							img.icon(src='/svg/stackoverflow.svg')
+			section
+				| Shop
+				ul.icon-group
+					li
+						a(href='#')
+							img.icon(src='/svg/etsy.svg')
+					li
+						a(href='#')
+							img.icon(src='/svg/tindie.svg')

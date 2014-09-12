@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	- each post in articles
+		article
+			header
+				h1: a(href='/blog/'+post._id) post.title
+				time(itemprop='dateCreated', datetime='')
+					span(class='entry-day') 3
+					span(class='entry-month') Apr
+					span(class='entry-year') 2014
+				ul(class='tags')
+			p= post.body
